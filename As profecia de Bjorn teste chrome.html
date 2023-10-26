@@ -8,7 +8,7 @@
         <h1>As crônicas de Bjorn</h1>
         <h2>O jovem da profecia</h2>
 
-        <!- Cards de cada personagem ->
+        
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="https://i.pinimg.com/564x/6e/bd/d0/6ebdd0a751650eee2b9d2110892ea9bf.jpg" alt="Imagem de capa do card">
             <div class="card-body">
@@ -27,6 +27,6 @@
             </div>
           </div>
 
-        <!- Cards de cada personagem ->
+        
     </body>
 </html>
