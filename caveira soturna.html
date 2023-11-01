@@ -2,8 +2,22 @@
     <img class="card-img-top" src="Dragao.jpg" alt="Imagem de capa do card">
     <div class="card-body">
         <h5 class="card-title">Dragão Alado</h5>
-        <p class="card-text">Dragão Alado, um jovem Philodox, pequeno em estatura, mas grande em coração e espiritualidade, uma alma tranquila, diferente do jovem Ahroun Bjorn, cujo coração é movido pela fúria.</p>
-        <a href="./caveira soturna.html" class="btn btn-primary">Visitar</a>
+        <p class="card-text">Dragão Alado, um jovem Philodox, pequeno em estatura, mas grande em coração e espiritualidade, uma alma tranquila, diferente do jovem Ahrown Bjorn, cujo coração é movido pela fúria.</p>
+        <a href="./caveira soturna.html" class="btn btn-primary" onclick="mostrarBotaoVoltar(this)">Visitar</a>
+
+        <!-- Botão de voltar (inicialmente oculto) -->
+        <button onclick="voltar()" class="btn btn-secondary" id="botaoVoltar" style="display: none">Voltar</button>
     </div>
 </div>
-</body>
+
+<script>
+    function mostrarBotaoVoltar(link) {
+        var botaoVoltar = link.parentElement.querySelector("#botaoVoltar");
+        link.style.display = "none"; // Oculta o link "Visitar"
+        botaoVoltar.style.display = "block"; // Torna visível o botão "Voltar"
+    }
+
+    function voltar() {
+        window.history.back();
+    }
+</script>

@@ -3,6 +3,21 @@
     <div class="card-body">
         <h5 class="card-title">Bjorn Svein</h5>
         <p class="card-text">Bjorn, um Ahrown, nascido sob a lua cheia, seu coração pulsa por batalhas para defender a grande mãe Gaia e seus irmãos, um grande Crias de Fenrir, teve a honra de herdar a Grand Klaive de sua linhagem sanguinia passada somente para os de sua descendencia</p>
-        <a href="./bjorn.html" class="btn btn-primary">Visitar</a>
+        <a href="./bjorn.html" class="btn btn-primary" onclick="mostrarBotaoVoltar(this)">Visitar</a>
+
+        <!-- Botão de voltar (inicialmente oculto) -->
+        <button onclick="voltar()" class="btn btn-secondary" id="botaoVoltar" style="display: none">Voltar</button>
     </div>
 </div>
+
+<script>
+    function mostrarBotaoVoltar(link) {
+        var botaoVoltar = link.parentElement.querySelector("#botaoVoltar");
+        link.style.display = "none"; // Oculta o link "Visitar"
+        botaoVoltar.style.display = "block"; // Torna visível o botão "Voltar"
+    }
+
+    function voltar() {
+        window.history.back();
+    }
+</script>
