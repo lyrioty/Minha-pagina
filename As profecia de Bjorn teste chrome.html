@@ -13,7 +13,10 @@
         <div class="card-body">
             <h5 class="card-title">Bjorn Svein</h5>
             <p class="card-text">Bjorn, um Ahrown, nascido sob a lua cheia, seu coração pulsa por batalhas para defender a grande mãe Gaia e seus irmãos, um grande Crias de Fenrir, teve a honra de herdar a Grand Klaive de sua linhagem sanguinia passada somente para os de sua descendencia</p>
-            <a href="./bjorn.html" class="btn btn-primary" onclick="mostrarBotaoVoltar(this)">Visitar</a>
+            <div>
+                <a href="./bjorn.html" class="btn btn-primary" onclick="mostrarBotaoVoltar(this)">Visitar</a>
+                <button onclick="voltar(this)" class="btn btn-secondary" style="display: none">Voltar</button>
+            </div>
         </div>
     </div>
 
@@ -22,16 +25,22 @@
         <div class="card-body">
             <h5 class="card-title">Dragão Alado</h5>
             <p class="card-text">Dragão Alado, um jovem Philodox, pequeno em estatura, mas grande em coração e espiritualidade, uma alma tranquila, diferente do jovem Ahroun Bjorn, cujo coração é movido pela fúria.</p>
-            <a href="./caveira soturna.html" class="btn btn-primary" onclick="mostrarBotaoVoltar(this)">Visitar</a>
+            <div>
+                <a href="./caveira soturna.html" class="btn btn-primary" onclick="mostrarBotaoVoltar(this)">Visitar</a>
+                <button onclick="voltar(this)" class="btn btn-secondary" style="display: none">Voltar</button>
+            </div>
         </div>
     </div>
 
     <script>
         function mostrarBotaoVoltar(link) {
-            var card = link.parentNode; // Encontra o card pai do link clicado
-            var botaoVoltar = card.querySelector(".btn-secondary"); // Encontra o botão "Voltar" dentro desse card
-            link.style.display = "none"; // Oculta o link "Visitar"
-            botaoVoltar.style.display = "block"; // Torna visível o botão "Voltar" dentro do card
+            var button = link.nextElementSibling.querySelector(".btn-secondary");
+            link.style.display = "none";
+            button.style.display = "block";
+        }
+
+        function voltar(button) {
+            window.history.back();
         }
     </script>
 </body>
